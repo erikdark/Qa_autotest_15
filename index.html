@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button Delay Test</title>
+  <style>
+    #verify {
+      display: none;
+    }
+    #verify_message {
+      display: none;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      const verifyButton = document.getElementById('verify');
+
+      // Disable button for 1 second
+      verifyButton.disabled = true;
+      setTimeout(() => {
+        verifyButton.disabled = false;
+        verifyButton.style.display = 'block';
+      }, 1000);
+    });
+
+    function verify() {
+      document.getElementById('verify_message').style.display = 'block';
+    }
+  </script>
+</head>
+<body>
+  <h1>Test for Delayed Button</h1>
+  <button id="verify" onclick="verify()">Verify</button>
+  <p id="verify_message">Verification successful!</p>
+</body>
+</html>
