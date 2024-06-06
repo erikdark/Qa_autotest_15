@@ -6,7 +6,7 @@
   <title>Button Delay Test</title>
   <style>
     #verify {
-      display: none;
+      display: block; /* Show the button immediately */
     }
     #verify_message {
       display: none;
@@ -20,7 +20,6 @@
       verifyButton.disabled = true;
       setTimeout(() => {
         verifyButton.disabled = false;
-        verifyButton.style.display = 'block';
       }, 1000);
     });
 
